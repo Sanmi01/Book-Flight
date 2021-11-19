@@ -1,0 +1,329 @@
+.section {
+	position: relative;
+	height: 100vh;
+}
+
+.section .section-center {
+	margin: auto;
+}
+
+#booking {
+	font-family: 'Lato', sans-serif;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #191a1e;
+}
+
+.booking-form {
+	position: relative;
+	background: #fff;
+	max-width: 642px;
+	width: 100%;
+	margin: auto;
+	padding: 45px 25px 25px;
+	border-radius: 4px;
+	background-color: rgba(57,154,244,.8);
+	-webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.booking-form .form-group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+	background-color: #fff;
+	height: 65px;
+	padding: 0px 15px;
+	padding-top: 24px;
+	color: #191a1e;
+	border: 2px solid #dfe5e9;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 4px;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control::placeholder {
+	color: #dfe5e9;
+}
+
+.booking-form .form-control:focus {
+	background: #f9fafb;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+	color: #dfe5e9;
+}
+
+
+
+.booking-form select.form-control+.select-arrow {
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+	color: #dfe5e9;
+	font-size: 14px;
+}
+
+.booking-form select.form-control+.select-arrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+	position: absolute;
+	top: 6px;
+	left: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 24px;
+	height: 24px;
+	font-size: 12px;
+	color: #6d8494;
+}
+
+.booking-form .form-checkbox input {
+	position: absolute !important;
+	margin-left: -9999px !important;
+	visibility: hidden !important;
+	display: none !important;
+}
+
+.booking-form .form-checkbox label {
+	position: relative;
+	padding: 4px 30px;
+	/* padding-left: 30px; */
+	font-weight: 700;
+	color: #191a1e;
+	margin-right: 10px;
+	margin-top: 5px;
+	background-color: hsla(0,0%,100%,.1);
+	color: #fff;
+	transition: all .4s;
+    border-radius: 3px;
+}
+
+.booking-form .form-checkbox label+label {
+	margin-left: 15px;
+}
+
+.booking-form .form-checkbox input+span {
+	position: absolute;
+	left: 2px;
+	top: 4px;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 2px solid #dfe5e9;
+	border-radius: 50%;
+}
+
+.booking-form .form-checkbox input+span:after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 50%;
+	background-color: #4fa3e3;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.booking-form .form-checkbox input:not(:checked)+span:after {
+	opacity: 0;
+}
+
+.booking-form .form-checkbox input:checked+span:after {
+	opacity: 1;
+	width: 10px;
+	height: 10px;
+}
+
+.booking-form .submit-btn {
+	color: #fff;
+	background-color: #4fa3e3;
+	font-weight: 400;
+	height: 65px;
+	font-size: 18px;
+	border: none;
+	width: 100%;
+	border-radius: 4px;
+	text-transform: uppercase
+}
+
+.booking-cta {
+	margin-top: 45px;
+}
+
+.booking-cta h1 {
+	font-size: 52px;
+	text-transform: uppercase;
+	color: #4fa3e3;
+	font-weight: 400;
+}
+
+.booking-cta p {
+	font-size: 22px;
+	color: #191a1e;
+}
+
+#dropdownMenuButton1, #flight-class {
+	padding-top: 0;
+}
+
+input[type="radio"]:checked + label {
+	background-color: rgba(34,51,68,.5);
+}
+
+.booking-form .form-checkbox input {
+	padding: 100px;
+}
+
+
+.passengers {
+	min-width: 250px;
+}
+
+
+
+.increase-sign, .decrease-sign {
+	padding: 4px 8px;
+	border-radius: 2px;
+	background-color: #f2f2f2;
+}
+
+.dropdown-item input[type="text"] {
+	width: 30px;
+}
+
+.passenger-item {
+	display: block;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.passenger-item input[type="text"] {
+	width: 30px;
+}
+
+.location-select {
+	padding-top: 24px !important;
+}
+
+#flight-class, .location-select {
+	background-color: #fff;
+    height: 65px;
+    padding: 0px 15px;
+    color: #191a1e;
+    border: 2px solid #dfe5e9;
+    font-size: 16px;
+    font-weight: 700;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 4px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.form-control.dropdown-toggle {
+	padding-top: 0;
+}
+
+.form-btn .submit-btn {
+	color: #fff;
+    background: #f58220;
+    border-color: #f58220;
+}
+
+#add-flight-div {
+	display: none;
+}
+
+#add-flight {
+	width: 100%;
+	font-size: 14px;
+    padding: 5px 20px;
+    transition: all .4s;
+    border-radius: 3px;
+    line-height: 20px;
+	color: #f1f4f7;
+    border-color: #f1f4f7;
+}
+
+#add-flight:hover {
+	color: black;
+}
+
+.remove-flight {
+	color: #fff;
+	width: fit-content;
+}
+
+.remove-flight:hover {
+	cursor: pointer;
+}
+
+.exchange {
+	color: white;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    /* text-align: center; */
+    font-size: 16px;
+    background-color: #399af4;
+	z-index: 100;
+}
+
+.exchange:hover {
+	cursor: pointer;
+}
+
+.exchanges {
+	color: white;
+	width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    /* text-align: center; */
+    font-size: 16px;
+    background-color: #399af4;
+	z-index: 100;
+}
+
+.exchanges:hover {
+	cursor: pointer;
+}
