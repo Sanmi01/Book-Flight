@@ -80,8 +80,18 @@ multiCity.addEventListener('click', () => {
     }
 })
 
+exchangeFun = (exchangeButton) => {
+    let first = exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value
+    let second = exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value;
+    let third = first
+
+    console.log(first, second)
+
+    exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value = second;
+    exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value = third;
+}
+
 addFlightButton.addEventListener('click', (e) => {
-    // e.preventDefault()
     let  addHtml = `
     <div>
     <div>
@@ -130,33 +140,17 @@ addFlightButton.addEventListener('click', (e) => {
     removeFlight()
 })
 
+
+
 function exchangeFlight() {
     let exchangeButtons = document.querySelectorAll('.exchanges')
+
     for (let i = 0; i < exchangeButtons.length; i++) {
-        exchangeButtons[i].addEventListener('click', () => {
-            
-        let first = exchangeButtons[i].parentNode.children[0].firstElementChild.lastElementChild.value
-            let second = exchangeButtons[i].parentNode.children[2].firstElementChild.lastElementChild.value;
-            let third = first
-
-            console.log(first, second)
-
-            exchangeButtons[i].parentNode.children[0].firstElementChild.lastElementChild.value = second;
-            exchangeButtons[i].parentNode.children[2].firstElementChild.lastElementChild.value = third;
-        })
+        if(i+1 == exchangeButtons.length) {
+            exchangeButtons[i].addEventListener('click', () =>  exchangeFun(exchangeButtons[i]))
+        }
+        
     }
-
-    // exchangeButtons.forEach((exchangeButton) => {
-    //     exchangeButton.addEventListener('click', () => {
-    //         let first = exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value
-    //         let second = exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value;
-    //         let third = first
-    //         console.log(first, second)
-    //         exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value = second;
-    //         exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value = third;
-    //     })
-    //     console.log("1")
-    // })
 }
 
 singleFlightExchange = () => {
