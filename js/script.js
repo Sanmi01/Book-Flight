@@ -33,8 +33,6 @@ roundtrip.addEventListener('click', () => {
     }
 
     removeAllAddedFlights()
-    exchangeFlight()
-
 })
 
 oneWay.addEventListener('click', () => {
@@ -57,8 +55,6 @@ oneWay.addEventListener('click', () => {
     }
 
     removeAllAddedFlights()
-    exchangeFlight()
-
 })
 
 multiCity.addEventListener('click', () => {
@@ -82,11 +78,10 @@ multiCity.addEventListener('click', () => {
         addFlightButtonDiv.style.display = "block"
 
     }
-    exchangeFlight()
 })
 
 addFlightButton.addEventListener('click', (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     let  addHtml = `
     <div>
     <div>
@@ -131,26 +126,37 @@ addFlightButton.addEventListener('click', (e) => {
     `
 
     addFlightButton.parentElement.insertAdjacentHTML("beforebegin", addHtml)
-    removeFlight()
     exchangeFlight()
-    
+    removeFlight()
 })
 
-exchangeFlight = () => {
+function exchangeFlight() {
     let exchangeButtons = document.querySelectorAll('.exchanges')
-    console.log("a", exchangeButtons)
     for (let i = 0; i < exchangeButtons.length; i++) {
         exchangeButtons[i].addEventListener('click', () => {
-            console.log("a", exchangeButtons)
-            let first = exchangeButtons[i].parentNode.children[0].firstElementChild.lastElementChild.value
+            
+        let first = exchangeButtons[i].parentNode.children[0].firstElementChild.lastElementChild.value
             let second = exchangeButtons[i].parentNode.children[2].firstElementChild.lastElementChild.value;
             let third = first
 
+            console.log(first, second)
+
             exchangeButtons[i].parentNode.children[0].firstElementChild.lastElementChild.value = second;
             exchangeButtons[i].parentNode.children[2].firstElementChild.lastElementChild.value = third;
-
         })
     }
+
+    // exchangeButtons.forEach((exchangeButton) => {
+    //     exchangeButton.addEventListener('click', () => {
+    //         let first = exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value
+    //         let second = exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value;
+    //         let third = first
+    //         console.log(first, second)
+    //         exchangeButton.parentNode.children[0].firstElementChild.lastElementChild.value = second;
+    //         exchangeButton.parentNode.children[2].firstElementChild.lastElementChild.value = third;
+    //     })
+    //     console.log("1")
+    // })
 }
 
 singleFlightExchange = () => {
@@ -183,8 +189,6 @@ removeAllAddedFlights = () => {
     
 }
 
-
-exchangeFlight()
 
 
 for (let i = 0; i < decreaseButtons.length; i++) {
